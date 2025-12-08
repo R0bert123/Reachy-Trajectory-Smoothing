@@ -1,0 +1,25 @@
+trajectory:
+  # --- 1. Arm anheben (Startposition zum Winken)
+  - {x: 0.25, y: 0.20, z: -0.10, steps: 80, delay: 0.02}
+
+  # --- 2. Hand nach rechts schwenken (Winkel +Y)
+  - {x: 0.25, y: 0.28, z: -0.10, steps: 60, delay: 0.02}
+
+  # --- 3. Hand nach links schwenken (Winkel -Y)
+  - {x: 0.25, y: 0.15, z: -0.10, steps: 60, delay: 0.02}
+
+  # --- 4. Wiederholung rechts
+  - {x: 0.25, y: 0.28, z: -0.10, steps: 60, delay: 0.02}
+
+  # --- 5. Wiederholung links
+  - {x: 0.25, y: 0.15, z: -0.10, steps: 60, delay: 0.02}
+
+  # --- 6. Wiederholung rechts
+  - {x: 0.25, y: 0.28, z: -0.10, steps: 60, delay: 0.02}
+
+  # --- 7. Wiederholung links
+  - {x: 0.25, y: 0.15, z: -0.10, steps: 60, delay: 0.02}
+
+  # --- 8. Arm wieder zur neutralen Winken-Pose zurück
+  - {x: 0.25, y: 0.20, z: -0.10, steps: 80, delay: 0.02}
+

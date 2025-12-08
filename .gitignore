@@ -1,0 +1,46 @@
+# ------------------------
+# PYTHON
+# ------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ------------------------
+# ROS / ROS2
+# ------------------------
+build/
+install/
+log/
+
+# Colcon metadata
+.colcon/
+
+# ------------------------
+# EDITORS / IDEs
+# ------------------------
+.vscode/
+.idea/
+
+# ------------------------
+# OS / TEMP / MISC
+# ------------------------
+*.swp
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# ------------------------
+# ROBOTICS
+# (URDF/Xacro produce no compiled artifacts, so nothing special needed)
+# ------------------------

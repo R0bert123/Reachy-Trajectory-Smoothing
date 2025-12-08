@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="reachy_left_arm">
+
+    <!-- Required args because arm.urdf.xacro expects them -->
+    <xacro:arg name="use_fake_hardware" default="true"/>
+    <xacro:arg name="use_gazebo" default="false"/>
+    <xacro:arg name="use_fixed_wheels" default="true"/>
+    <xacro:arg name="use_ros_control" default="true"/>
+    <xacro:arg name="damping" default="0.1"/>
+    <xacro:arg name="friction" default="0.1"/>
+    <xacro:arg name="prefix" default="l"/>
+    <xacro:arg name="side" default="left"/>
+
+    <!-- Minimal base -->
+    <link name="base_link"/>
+    <link name="torso"/>
+
+    <joint name="base_to_torso" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="torso"/>
+    </joint>
+
+    <!-- Import original Reachy arm macro -->
+    <xacro:include filename="$(find reachy_description)/urdf/arm.urdf.xacro"/>
+
+    <!-- Instantiate left arm exactly like Reachy -->
+    <xacro:arm
+        prefix="$(arg prefix)"
+        parent="torso"
+        side="$(arg side)"
+        damping="$(arg damping)"
+        friction="$(arg friction)"
+
+        serial_port="none"
+        mx_ids="20, 21, 22, 23, 24, 25, 26, 27"
+        offsets="1.57, -1.57, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0"
+        is_direct="1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0"
+        reductions="1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -2.0"
+
+        force_sensor_id="50"
+        fan_id="51"
+    />
+
+</robot>
+

@@ -1,0 +1,18 @@
+trajectory:
+  # --- 1. Arm leicht anheben aus der Home-Pose
+  - {x: 0.25, y: 0.15, z: -0.10, steps: 70, delay: 0.02}
+
+  # --- 2. Arm nach vorne strecken (Pointing)
+  - {x: 0.32, y: 0.12, z: -0.12, steps: 80, delay: 0.02}
+
+  # --- 3. Etwas weiter nach vorne – Zeigegeste
+  - {x: 0.35, y: 0.10, z: -0.15, steps: 70, delay: 0.02}
+
+  # --- 4. Kleine Bewegung zur Betonung des "Point"
+  - {x: 0.36, y: 0.10, z: -0.15, steps: 40, delay: 0.02}
+  - {x: 0.34, y: 0.10, z: -0.15, steps: 40, delay: 0.02}
+  - {x: 0.36, y: 0.10, z: -0.15, steps: 40, delay: 0.02}
+
+  # --- 5. Arm wieder auf die natürliche Zwischenhöhe
+  - {x: 0.25, y: 0.15, z: -0.10, steps: 70, delay: 0.02}
+

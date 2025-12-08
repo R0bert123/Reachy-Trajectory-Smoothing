@@ -1,0 +1,24 @@
+trajectory:
+  # --- 1. Arm aus der Home-Pose leicht nach unten führen
+  - {x: 0.25, y: 0.15, z: -0.15, steps: 70, delay: 0.02}
+
+  # --- 2. Weiter nach unten zum "Greif-Höhe"
+  - {x: 0.28, y: 0.10, z: -0.22, steps: 80, delay: 0.02}
+
+  # --- 3. Weiter nach vorne beugen (über dem Objekt)
+  - {x: 0.32, y: 0.10, z: -0.25, steps: 80, delay: 0.02}
+
+  # --- 4. Kleiner Absenk-Schritt zum Greifen
+  - {x: 0.32, y: 0.10, z: -0.27, steps: 40, delay: 0.02}
+
+  # --- 5. "Greifbewegung" simulieren – leichtes hin und her
+  - {x: 0.33, y: 0.10, z: -0.27, steps: 40, delay: 0.02}
+  - {x: 0.31, y: 0.10, z: -0.27, steps: 40, delay: 0.02}
+  - {x: 0.33, y: 0.10, z: -0.27, steps: 40, delay: 0.02}
+
+  # --- 6. Wieder etwas nach oben
+  - {x: 0.28, y: 0.10, z: -0.20, steps: 70, delay: 0.02}
+
+  # --- 7. Zurück zur Zwischenhöhe
+  - {x: 0.25, y: 0.15, z: -0.12, steps: 70, delay: 0.02}
+

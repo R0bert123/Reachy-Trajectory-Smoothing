@@ -1,0 +1,19 @@
+trajectory:
+  - x: 0.30
+    y: 0.18
+    z: -0.10
+    roll: 0.0
+    pitch: 1.57
+    yaw: 0.0
+    steps: 80
+    delay: 0.02
+
+  - x: 0.32
+    y: 0.10
+    z: -0.15
+    roll: 0.2
+    pitch: 1.57
+    yaw: 0.1
+    steps: 60
+    delay: 0.02
+

@@ -1,0 +1,6 @@
+trajectory:
+  - {x: 0.30, y: 0.18, z: -0.10, steps: 90, delay: 0.02}
+  - {x: 0.33, y: 0.10, z: -0.15, steps: 90, delay: 0.02}
+  - {x: 0.28, y: 0.14, z: -0.22, steps: 90, delay: 0.02}
+  - {x: 0.26, y: 0.20, z: -0.12, steps: 90, delay: 0.02}
+
