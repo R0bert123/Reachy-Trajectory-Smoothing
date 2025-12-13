@@ -1,0 +1,4 @@
+IP = 192.168.68.50
+Port = 3972
+
+Verbinden mit Dashboard: Im Browser "http:// IP-Adresse : Port"
