@@ -1,6 +1,6 @@
 # Trajectory Smoothing for the Humanoid Robot Reachy
 
-![Reachy Robot](images/reachy.jpg)
+![Reachy Robot](images/reachy.png)
 
 ## Project Overview
 
