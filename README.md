@@ -1,5 +1,7 @@
 # Trajectory Smoothing for the Humanoid Robot Reachy
 
+![Reachy Robot](images/reachy.jpg)
+
 ## Project Overview
 
 This project was developed as part of my master's thesis and focuses on improving the movement smoothness of the humanoid robot Reachy 2023.
