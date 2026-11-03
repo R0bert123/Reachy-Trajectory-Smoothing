@@ -58,19 +58,23 @@ The evaluation focused on aspects such as anthropomorphism, animacy, likeability
 
 ![Interpolation Methods Comparison](images/interpolation-methods-comparison.png)
 
-## Dynamic Metrics
+### Dynamic Metrics
 
 ![Dynamic Metrics](images/dynamic-metrics-comparison.png)
 
-## Position Accuracy
+### Position Accuracy
 
 ![Position Accuracy](images/position-accuracy-comparison.png)
 
-## Timing Metrics
+### Timing Metrics
 
 ![Timing Metrics](images/timing-metrics-comparison.png)
 
-## Key Findings
+### Human perception study (Godspeed Questionnaire)
+
+![Human perception study (Godspeed Questionnaire)](images/human-perception-study.png)
+
+### Key Findings
 - Linear interpolation produced the highest jerk values.
 - Minimum Jerk and Quintic interpolation achieved particularly low jerk values.
 - The human perception study showed that technically smoother movements were not necessarily perceived as the most natural or likeable.
