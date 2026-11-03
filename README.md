@@ -28,12 +28,12 @@ The project combines robot programming, trajectory planning, data analysis, and 
 
 ## Implemented Features
 I implemented six different trajectory interpolation methods to control the robot's joint movements:
-#### 1. Linear Interpolation
-#### 2. Cubic Interpolation
-#### 3. Quintic Interpolation
+#### 1. Minimum Jerk Interpolation
+#### 2. Polynomial Spline (Cubic) Interpolation
+#### 3. Polynomial Spline (Quintic) Interpolation
 #### 4. B-Spline Interpolation
-#### 5. Bézier Interpolation
-#### 6. Minimum Jerk Interpolation
+#### 5. Bézier Curve Interpolation
+#### 6. Linear Interpolation (No Interpolator)
 
 These methods allow the robot to perform movements with different velocity and acceleration profiles.
 The implementation makes it possible to execute and compare the different movement styles on the physical robot.
