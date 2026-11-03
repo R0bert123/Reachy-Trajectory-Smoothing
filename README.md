@@ -1,7 +1,9 @@
 # Trajectory Smoothing for the Humanoid Robot Reachy
 
 <p align="center">
-  <img src="images/reachy-robot.png" alt="Reachy Robot" width="500">
+  <img src="images/reachy-robot.png" 
+    alt="Reachy Robot"
+    width="450">
 </p>
 
 *Image source [Pollen Robotics](https://pollen-robotics.github.io/reachy-2023-docs/advanced/overview/full-kit/reachy-advanced-kit_hubc34c1a491cdc3dbec46112c43fcbade_296143_500x0_resize_box_2.png)
@@ -58,23 +60,43 @@ The evaluation focused on aspects such as anthropomorphism, animacy, likeability
 
 ### Interpolation Methods Comparison
 
-![Interpolation Methods Comparison](images/interpolation-methods-comparison.png)
+<p align="center">
+  <img src="images/interpolation-methods-comparison.png" 
+    alt="Interpolation Methods Comparison" 
+    width="100%">
+</p>
 
 ### Dynamic Metrics
 
-![Dynamic Metrics](images/dynamic-metrics-comparison.png)
+<p align="center">
+  <img src="images/dynamic-metrics-comparison.png" 
+    alt="Dynamic Metrics" 
+    width="100%">
+</p>
 
 ### Position Accuracy
 
-![Position Accuracy](images/position-accuracy-comparison.png)
+<p align="center">
+  <img src="images/position-accuracy-comparison.png" 
+    alt="Position Accuracy" 
+    width="100%">
+</p>
 
 ### Timing Metrics
 
-![Timing Metrics](images/timing-metrics-comparison.png)
+<p align="center">
+  <img src="images/timing-metrics-comparison.png" 
+    alt="Timing Metrics" 
+    width="100%">
+</p>
 
 ### Human perception study (Godspeed Questionnaire)
 
-![Human perception study (Godspeed Questionnaire)](images/human-perception-study.png)
+<p align="center">
+  <img src="images/human-perception-study.png" 
+    alt="Human perception study (Godspeed Questionnaire)" 
+    width="100%">
+</p>
 
 ### Key Findings
 - Linear interpolation produced the highest jerk values.
