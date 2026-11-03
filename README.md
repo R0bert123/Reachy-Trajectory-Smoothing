@@ -1,6 +1,8 @@
 # Trajectory Smoothing for the Humanoid Robot Reachy
 
-![Reachy Robot](images/reachy-robot.png)
+<p align="center">
+  <img src="images/reachy-robot.png" alt="Reachy Robot" width="500">
+</p>
 
 *Image source [Pollen Robotics](https://pollen-robotics.github.io/reachy-2023-docs/advanced/overview/full-kit/reachy-advanced-kit_hubc34c1a491cdc3dbec46112c43fcbade_296143_500x0_resize_box_2.png)
 
