@@ -1,6 +1,6 @@
 # Trajectory Smoothing for the Humanoid Robot Reachy
 
-![Reachy Robot](images/reachy.png)
+![Reachy Robot](images/reachy-robot.png)
 
 *Image source [Pollen Robotics](https://pollen-robotics.github.io/reachy-2023-docs/advanced/overview/full-kit/reachy-advanced-kit_hubc34c1a491cdc3dbec46112c43fcbade_296143_500x0_resize_box_2.png)
 
@@ -51,6 +51,24 @@ The robot's movements were analyzed using different performance metrics, includi
 An online study was conducted to investigate how humans perceive the different movement styles.
 Participants watched videos of the robot performing movements using the six interpolation methods and evaluated them using the Godspeed questionnaire.
 The evaluation focused on aspects such as anthropomorphism, animacy, likeability, perceived intelligence, and perceived safety.
+
+## Evaluation Results
+
+### Interpolation Methods Comparison
+
+![Interpolation Methods Comparison](images/interpolation-methods-comparison.png)
+
+## Dynamic Metrics
+
+![Dynamic Metrics](images/dynamic-metrics-comparison.png)
+
+## Position Accuracy
+
+![Position Accuracy](images/position-accuracy-comparison.png)
+
+## Timing Metrics
+
+![Timing Metrics](images/timing-metrics-comparison.png)
 
 ## Key Findings
 - Linear interpolation produced the highest jerk values.
