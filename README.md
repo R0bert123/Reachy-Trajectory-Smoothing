@@ -8,6 +8,16 @@
 
 *Image source [Pollen Robotics](https://pollen-robotics.github.io/reachy-2023-docs/advanced/overview/full-kit/reachy-advanced-kit_hubc34c1a491cdc3dbec46112c43fcbade_296143_500x0_resize_box_2.png)
 
+## Short Robot Movement Demonstration
+
+The short clip shows the trajectory smoothing implementation with "Bézier Curve Interpolation" on the humanoid robot Reachy.
+
+<p align="center">
+  <img src="images/reachy-movement-bezier.mp4"
+       alt="Reachy performing a smoothed robot movement with Bézier Curve Interpolation"
+       width="500">
+</p>
+
 ## Project Overview
 
 This project was developed as part of my master's thesis and focuses on improving the movement smoothness of the humanoid robot Reachy 2023.
