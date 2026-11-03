@@ -12,11 +12,7 @@
 
 The short clip shows the trajectory smoothing implementation with "Bézier Curve Interpolation" on the humanoid robot Reachy.
 
-<p align="center">
-  <img src="images/reachy-movement-bezier.mp4"
-       alt="Reachy performing a smoothed robot movement with Bézier Curve Interpolation"
-       width="500">
-</p>
+https://github.com/user-attachments/assets/33f3b089-d5b0-4e7d-8187-ad2e3db3c450
 
 ## Project Overview
 
