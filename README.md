@@ -18,9 +18,7 @@ The main goal was to implement and compare different trajectory interpolation me
 The project combines robot programming, trajectory planning, data analysis, and human-robot interaction.
 
 ## Technologies Used
-- Programming Language:
-  - Python
-  - R
+- Programming Language: Python
 - Operating System: Linux (Ubuntu 22.04)
 - Robotics Framework: ROS 2 Humble
 - Robot: Reachy 2023
