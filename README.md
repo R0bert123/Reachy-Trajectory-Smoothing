@@ -70,6 +70,8 @@ The evaluation focused on aspects such as anthropomorphism, animacy, likeability
     width="100%">
 </p>
 
+*Note: The comparison provides a qualitative overview of the interpolation methods. Computational complexity, real-time suitability and numerical stability may vary depending on the implementation and application.*
+
 ### Dynamic Metrics
 
 <p align="center">
