@@ -25,7 +25,12 @@ Relevant dependencies were in this project:
 
 ## 2. Project Structure
 
-The repository contains the following components
+The repository contains the following main components:
+
+  - `reachy_description/`: Contains the URDF models, ROS 2 configuration files, and launch files.
+  - `reachy_scripts/YAML-Files/`: Contains predefined robot movement sequences and waypoints.
+  - `reachy_scripts/RVIZ_Nodes/`: Contains additional ROS 2 visualization scripts.
+  - `reachy_trajectory_smoothing.py`: Main Python script implementing the six interpolation methods.
 
 ## 3. ROS 2 Setup
 
