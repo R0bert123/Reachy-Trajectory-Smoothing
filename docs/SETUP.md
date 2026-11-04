@@ -38,7 +38,7 @@ The robot description package must be available in a configured ROS 2 environmen
 
 Initialize ROS 2 Humble in a terminal:
 
-source /opt/ros/humble/setup.bash
+`source /opt/ros/humble/setup.bash`
 
 ### Building the Robot Description Package
 
@@ -48,17 +48,17 @@ Place the package in the src directory of a ROS 2 workspace.
 
 For example, create a workspace:
 
-mkdir -p ~/reachy_ws/src
+`mkdir -p ~/reachy_ws/src`
 
-After placing the package inside ~/reachy_ws/src/, build the workspace:
+After placing the package inside `~/reachy_ws/src/`, build the workspace:
 
-cd ~/reachy_ws
+`cd ~/reachy_ws`
 
-colcon build --symlink-install
+`colcon build --symlink-install`
 
 After a successful build, source the workspace:
 
-source ~/reachy_ws/install/setup.bash
+`source ~/reachy_ws/install/setup.bash`
 
 Depending on the installed ROS 2 packages, additional dependencies may be required.
 
@@ -82,7 +82,7 @@ The directory also contains configuration files for ROS 2 Control and launch fil
 
 ## 5. YAML Movement Files
 
-The reachy_scripts/YAML-Files/ directory contains predefined movement configurations.
+The `reachy_scripts/YAML-Files/` directory contains predefined movement configurations.
 
 Each YAML file defines joint positions that the robot should pass through during a movement sequence.
 
@@ -101,11 +101,11 @@ Depending on the configuration, YAML files can include:
 
 The same movement configuration can be evaluated using different interpolation methods.
 
-For further information, see the README in the YAML-Files directory.
+For further information, see the `README.md` in the YAML-Files directory.
 
 ## 6. Running the Main Program
 
-The main implementation is located in: reachy_trajectory_smoothing.py
+The main implementation is located in: `reachy_trajectory_smoothing.py`
 
 Before executing the program:
   1. Initialize the ROS 2 environment.
@@ -126,18 +126,18 @@ Execution command: To be documented according to the final script's actual argum
 
 ## 7. RViz Visualization
 
-The reachy_scripts/RVIZ_Nodes/ directory contains an additional ROS 2 node for visualizing joint positions in RViz.
+The `reachy_scripts/RVIZ_Nodes/` directory contains an additional ROS 2 node for visualizing joint positions in RViz.
 
-The node subscribes to the /joint_states topic and converts joint positions from radians to degrees.
+The node subscribes to the `/joint_states` topic and converts joint positions from radians to degrees.
 
-The calculated angles are published as text markers using the /joint_state_text_array topic.
+The calculated angles are published as text markers using the `/joint_state_text_array` topic.
 
 To display these values:
   1. Start the ROS 2 environment.
   2. Launch RViz with the Reachy robot description.
   3. Start the joint state visualization node.
   4. Add a MarkerArray display in RViz.
-  5. Select the /joint_state_text_array topic.
+  5. Select the `/joint_state_text_array` topic.
 
 The required TF frames must be available for the text markers to appear at the correct positions.
 
