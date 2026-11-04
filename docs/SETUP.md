@@ -6,14 +6,14 @@ This document explains the requirements and configuration steps for the trajecto
 
 The project was developed and tested using the following environment:
 
-  - Operating System: Ubuntu 22.04
-  - Programming Language: Python 3.10
-  - Robotics Framework: ROS 2 Humble
-  - Robot: Reachy 2023
+  - **Operating System**: Ubuntu 22.04
+  - **Programming Language**: Python 3.10
+  - **Robotics Framework**: ROS 2 Humble
+  - **Robot**: Reachy 2023
 
 ### Software Dependencies
 
-Relevant dependencies were in this project:
+These relevant dependencies were used in this project:
 
   - NumPy
   - SciPy
