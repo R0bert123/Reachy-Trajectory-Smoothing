@@ -13,15 +13,20 @@ The project was developed and tested using the following environment:
 
 ### Software Dependencies
 
-These relevant dependencies were used in this project:
+The following dependencies were used in this project:
 
+**Python Libraries:**
   - NumPy
   - SciPy
-  - ROS 2 Python Client Library (`rclpy`)
-  - ROS 2 Control (`ros2_control, ros2_controllers`)
-  - RViz
   - IKPy
   - ReachySDK
+
+**ROS 2 Components:**
+  - ROS 2 Python Client Library (`rclpy`)
+  - ROS 2 Control (`ros2_control`, `ros2_controllers`)
+  - RViz
+
+**Note:** Some dependencies are only required for specific scripts or funtionalities.
 
 ## 2. Project Structure
 
@@ -42,15 +47,16 @@ Initialize ROS 2 Humble in a terminal:
 
 ### Building the Robot Description Package
 
-The `reachy_description` directory contains a ROS 2 package with its own package.xml and CMakeLists.txt.
+The `reachy_description` directory contains a ROS 2 package with its own `package.xml` and `CMakeLists.txt`.
 
-Place the package in the src directory of a ROS 2 workspace.
-
-For example, create a workspace:
+Create a ROS 2 workspace:
 
 `mkdir -p ~/reachy_ws/src`
 
-After placing the package inside `~/reachy_ws/src/`, build the workspace:
+From the root directory of the cloned repository, copy `reachy_description/` into the workspace `src/` directory:
+`cp -r reachy_description ~/reachy_ws/src/`
+
+Build the workspace:
 
 `cd ~/reachy_ws`
 
@@ -60,16 +66,15 @@ After a successful build, source the workspace:
 
 `source ~/reachy_ws/install/setup.bash`
 
-Depending on the installed ROS 2 packages, additional dependencies may be required.
-
+Additional dependencies may be required depending on the installed ROS 2 packages and robot configuration.
 
 ## 4. URDF Configuration
 
-The reachy_description directory contains the robot description files required for visualization and robot control.
+The `reachy_description` directory contains the robot description files required for visualization and robot control.
 
-The URDF files define the robot's kinematic structure, including its joints and links.
+The URDF files define the robot's kinematic structure, including the joints and links.
 
-For this project, robot descriptions were adapted to support the left and right arms of Reachy.
+For this project, the robot descriptions were adapted to support the left and right arms of Reachy.
 
 The directory also contains configuration files for ROS 2 Control and launch files for initializing the robot environment.
 
@@ -77,14 +82,14 @@ The directory also contains configuration files for ROS 2 Control and launch fil
 
   - Ensure that the correct URDF files are loaded.
   - Verfiy the joint names and joint limits.
-  - Check that the ROS 2 controllers are configured correctly.
-  - Ensure that the required TF frames are availabe when using RViz.
+  - Check that the ROS 2 controllers are configured and active.
+  - Ensure that the required TF frames are available when using RViz.
 
 ## 5. YAML Movement Files
 
 The `reachy_scripts/YAML-Files/` directory contains predefined movement configurations.
 
-Each YAML file defines joint positions that the robot should pass through during a movement sequence.
+Each YAML file defines joint positions (waypoints) that the robot should pass through during a movement sequence.
 
 The main Python script loads these configurations and generates interpolated movements between the defined waypoints.
 
@@ -122,7 +127,11 @@ The program implements six interpolation methods:
   - Cubic Bézier Interpolation
   - Minimum-Jerk Interpolation
 
-Execution command: To be documented according to the final script's actual arguments and configuration.
+The selected method determines how the robot moves between the predefined waypoints.
+
+### Execution: 
+
+To be documented according to the final script's actual arguments and configuration.
 
 ## 7. RViz Visualization
 
@@ -136,12 +145,12 @@ To display these values:
   1. Start the ROS 2 environment.
   2. Launch RViz with the Reachy robot description.
   3. Start the joint state visualization node.
-  4. Add a MarkerArray display in RViz.
+  4. Add a `MarkerArray` display in RViz.
   5. Select the `/joint_state_text_array` topic.
 
 The required TF frames must be available for the text markers to appear at the correct positions.
 
-## 8. Safety Nodes
+## 8. Safety Notes
 
 When executing movement sequences on the physical Reachy robot, the following precautions should be considered:
 
