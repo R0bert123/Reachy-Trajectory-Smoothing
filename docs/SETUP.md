@@ -19,14 +19,14 @@ The following dependencies were used in this project:
   - NumPy
   - SciPy
   - IKPy
-  - ReachySDK
+  - Reachy SDK
 
 **ROS 2 Components:**
   - ROS 2 Python Client Library (`rclpy`)
   - ROS 2 Control (`ros2_control`, `ros2_controllers`)
   - RViz
 
-**Note:** Some dependencies are only required for specific scripts or funtionalities.
+**Note:** Some dependencies are only required for specific scripts or functionalities.
 
 ## 2. Project Structure
 
@@ -58,9 +58,10 @@ From the root directory of the cloned repository, copy `reachy_description/` int
 
 Build the workspace:
 
-`cd ~/reachy_ws`
-
-`colcon build --symlink-install`
+```bash
+cd ~/reachy_ws
+colcon build --symlink-install
+```
 
 After a successful build, source the workspace:
 
@@ -81,7 +82,7 @@ The directory also contains configuration files for ROS 2 Control and launch fil
 ### Important Notes
 
   - Ensure that the correct URDF files are loaded.
-  - Verfiy the joint names and joint limits.
+  - Verify the joint names and joint limits.
   - Check that the ROS 2 controllers are configured and active.
   - Ensure that the required TF frames are available when using RViz.
 
@@ -93,7 +94,7 @@ Each YAML file defines joint positions (waypoints) that the robot should pass th
 
 The main Python script loads these configurations and generates interpolated movements between the defined waypoints.
 
-### Available Movement Configurations
+### Available Movement Parameters
 
 Depending on the configuration, YAML files can include:
 
@@ -106,7 +107,7 @@ Depending on the configuration, YAML files can include:
 
 The same movement configuration can be evaluated using different interpolation methods.
 
-For further information, see the `README.md` in the YAML-Files directory.
+For further information, see the [YAML Movement Files Documentation](../reachy_scripts/YAML-Files/README.md).
 
 ## 6. Running the Main Program
 
@@ -120,7 +121,7 @@ Before executing the program:
   5. Select the desired interpolation method.
 
 The program implements six interpolation methods:
-  - Linear Interpolation (No Interpolator)
+  - Linear Interpolation (No Interpolator / No Smoothing)
   - Cubic Polynomial Interpolation
   - Quintic Polynomial Interpolation
   - Cubic B-Spline Interpolation
@@ -129,9 +130,11 @@ The program implements six interpolation methods:
 
 The selected method determines how the robot moves between the predefined waypoints.
 
-### Execution: 
+### Execution
 
-To be documented according to the final script's actual arguments and configuration.
+Navigate to the root directory of the repository and execute the main Python script:
+
+`python3 reachy_trajectory_smoothing.py`
 
 ## 7. RViz Visualization
 
@@ -139,7 +142,7 @@ The `reachy_scripts/RVIZ_Nodes/` directory contains an additional ROS 2 node for
 
 The node subscribes to the `/joint_states` topic and converts joint positions from radians to degrees.
 
-The calculated angles are published as text markers using the `/joint_state_text_array` topic.
+The converted angles are published as text markers using the `/joint_state_text_array` topic.
 
 To display these values:
   1. Start the ROS 2 environment.
