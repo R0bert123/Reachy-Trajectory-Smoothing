@@ -8,7 +8,7 @@ The project was developed and tested using the following environment:
 
   - Operating System: Ubuntu 22.04
   - Programming Language: Python 3.10
-  - Robotics Framework: ROS2 Humble
+  - Robotics Framework: ROS 2 Humble
   - Robot: Reachy 2023
 
 ### Software Dependencies
@@ -17,8 +17,8 @@ Relevant dependencies were in this project:
 
   - NumPy
   - SciPy
-  - ROS 2 Python Client Library (rclpy)
-  - ROS 2 Control (ros2_control, ros2_controllers)
+  - ROS 2 Python Client Library (`rclpy`)
+  - ROS 2 Control (`ros2_control, ros2_controllers`)
   - RViz
   - IKPy
   - ReachySDK
@@ -42,7 +42,7 @@ Initialize ROS 2 Humble in a terminal:
 
 ### Building the Robot Description Package
 
-The reachy_description directory contains a ROS 2 package with its own package.xml and CMakeLists.txt.
+The `reachy_description` directory contains a ROS 2 package with its own package.xml and CMakeLists.txt.
 
 Place the package in the src directory of a ROS 2 workspace.
 
