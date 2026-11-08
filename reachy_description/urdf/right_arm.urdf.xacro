@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot name="reachy_right_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Reachy base arguments -->
+  <xacro:arg name="use_gazebo" default="false"/>
+  <xacro:arg name="use_fake_hardware" default="true"/>
+  <xacro:arg name="robot_config" default="full_kit"/>
+
+  <xacro:property name="damping" value="0.1"/>
+  <xacro:property name="friction" value="0.1"/>
+
+  <!-- Base link -->
+  <link name="base_link"/>
+
+  <!-- Torso (dummy for arm attachment) -->
+  <link name="torso"/>
+
+  <joint name="base_to_torso" type="fixed">
+    <parent link="base_link"/>
+    <child link="torso"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Import the official Reachy arm macro -->
+  <xacro:include filename="$(find reachy_description)/urdf/arm.urdf.xacro"/>
+
+  <!-- Right arm definition -->
+  <xacro:arm
+      prefix="r"
+      parent="torso"
+      side="right"
+      damping="${damping}"
+      friction="${friction}"
+      serial_port="/dev/usb2ax_right_arm"
+      mx_ids="10, 11, 12, 13, 14, 15, 16, 17"
+      offsets="1.57, 1.57, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0"
+      is_direct="0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0"
+      reductions="1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -2.0"
+      force_sensor_id="40"
+      fan_id="41"
+  />
+
+</robot>
+
