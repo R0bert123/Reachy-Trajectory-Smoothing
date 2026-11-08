@@ -1,0 +1,321 @@
+return_home: true
+
+trajectory:
+
+  # ==========================================================
+  # 01 HOME POSE  (Start)
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -3
+        r_shoulder_roll: -2
+        r_arm_yaw: 0
+        r_elbow_pitch: -58
+        r_forearm_yaw: 1
+        r_wrist_pitch: -29
+        r_wrist_roll: 0
+        r_gripper: -25
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: 1
+        l_shoulder_roll: 4
+        l_arm_yaw: 1
+        l_elbow_pitch: -63
+        l_forearm_yaw: -2
+        l_wrist_pitch: -21
+        l_wrist_roll: 1
+        l_gripper: -7
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 02
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -3
+        r_shoulder_roll: -1
+        r_arm_yaw: -10
+        r_elbow_pitch: -100
+        r_forearm_yaw: 2
+        r_wrist_pitch: -27
+        r_wrist_roll: 28
+        r_gripper: -25   # offen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: -4
+        l_shoulder_roll: 4
+        l_arm_yaw: 6
+        l_elbow_pitch: -110
+        l_forearm_yaw: 4
+        l_wrist_pitch: 22
+        l_wrist_roll: 0
+        l_gripper: 0
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+ # ==========================================================
+  # 03
+  # ==========================================================
+
+  - right:
+      joints:
+        r_shoulder_pitch: -4
+        r_shoulder_roll: 2
+        r_arm_yaw: -70
+        r_elbow_pitch: -92
+        r_forearm_yaw: 0
+        r_wrist_pitch: 0
+        r_wrist_roll: 25
+        r_gripper: -20  # offen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: 1
+        l_shoulder_roll: 2
+        l_arm_yaw: 63
+        l_elbow_pitch: -83
+        l_forearm_yaw: 5
+        l_wrist_pitch: -21
+        l_wrist_roll: 30
+        l_gripper: 10
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 04 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -3
+        r_shoulder_roll: 0
+        r_arm_yaw: -24
+        r_elbow_pitch: -124
+        r_forearm_yaw: -20
+        r_wrist_pitch: 8
+        r_wrist_roll: 15
+        r_gripper: -30 #Offen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: -8
+        l_shoulder_roll: 7
+        l_arm_yaw: 8
+        l_elbow_pitch: -117
+        l_forearm_yaw: -11
+        l_wrist_pitch: -23
+        l_wrist_roll: -34
+        l_gripper: 20
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 05 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -4
+        r_shoulder_roll: -2
+        r_arm_yaw: -4
+        r_elbow_pitch: -115
+        r_forearm_yaw: -7
+        r_wrist_pitch: -15
+        r_wrist_roll: 10
+        r_gripper: -15 
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: -11
+        l_shoulder_roll: 4
+        l_arm_yaw: 19
+        l_elbow_pitch: -113
+        l_forearm_yaw: 45
+        l_wrist_pitch: -22
+        l_wrist_roll: 10
+        l_gripper: 30
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 06 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -3
+        r_shoulder_roll: 0
+        r_arm_yaw: -5
+        r_elbow_pitch: -124
+        r_forearm_yaw: -15
+        r_wrist_pitch: -30
+        r_wrist_roll: 10
+        r_gripper: 0 
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: -11
+        l_shoulder_roll: 6
+        l_arm_yaw: 2
+        l_elbow_pitch: -114
+        l_forearm_yaw: -12
+        l_wrist_pitch: -22
+        l_wrist_roll: -34
+        l_gripper: 40
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  # ==========================================================
+  # 07 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -3
+        r_shoulder_roll: -4
+        r_arm_yaw: -3
+        r_elbow_pitch: -124
+        r_forearm_yaw: 22
+        r_wrist_pitch: -35
+        r_wrist_roll: 15
+        r_gripper: 10
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: -10
+        l_shoulder_roll: 5
+        l_arm_yaw: 12
+        l_elbow_pitch: -110
+        l_forearm_yaw: 23
+        l_wrist_pitch: -22
+        l_wrist_roll: 21
+        l_gripper: 30
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 08 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -3
+        r_shoulder_roll: 1
+        r_arm_yaw: -12
+        r_elbow_pitch: -124
+        r_forearm_yaw: -43
+        r_wrist_pitch: -30
+        r_wrist_roll: 15
+        r_gripper: -20
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: -8
+        l_shoulder_roll: 4
+        l_arm_yaw: 11
+        l_elbow_pitch: -104
+        l_forearm_yaw: 10
+        l_wrist_pitch: -5
+        l_wrist_roll: -22
+        l_gripper: 20
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  # ==========================================================
+  # 09 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -5
+        r_shoulder_roll: -60
+        r_arm_yaw: -39
+        r_elbow_pitch: -76
+        r_forearm_yaw: 50
+        r_wrist_pitch: 10
+        r_wrist_roll: 30
+        r_gripper: -30
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: -75
+        l_shoulder_roll: 25
+        l_arm_yaw: -17
+        l_elbow_pitch: -25
+        l_forearm_yaw: -15
+        l_wrist_pitch: -3
+        l_wrist_roll: -20
+        l_gripper: 30
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 10
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -3
+        r_shoulder_roll: 0
+        r_arm_yaw: 0
+        r_elbow_pitch: -111
+        r_forearm_yaw: 2
+        r_wrist_pitch: -30
+        r_wrist_roll: 0
+        r_gripper: -35 
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  - left:
+      joints:
+        l_shoulder_pitch: -8
+        l_shoulder_roll: 3
+        l_arm_yaw: 11
+        l_elbow_pitch: -94
+        l_forearm_yaw: 0
+        l_wrist_pitch: 13
+        l_wrist_roll: -14
+        l_gripper: 25
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+

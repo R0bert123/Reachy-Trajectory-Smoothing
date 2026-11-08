@@ -1,0 +1,222 @@
+return_home: false
+
+trajectory:
+
+  # ==========================================================
+  # 01 HOME POSE  (Start)
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: 8
+        r_shoulder_roll: 1
+        r_arm_yaw: 1
+        r_elbow_pitch: -68
+        r_forearm_yaw: 5
+        r_wrist_pitch: -26
+        r_wrist_roll: -6
+        r_gripper: -25
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 02a Arm fährt nach oben / zur Seite (Greifen vorbereiten)
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: 0
+        r_shoulder_roll: -8
+        r_arm_yaw: -31
+        r_elbow_pitch: -108
+        r_forearm_yaw: -38
+        r_wrist_pitch: -33
+        r_wrist_roll: -21
+        r_gripper: -25   # offen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+ # ==========================================================
+  # 02b Feinpositionierung über Objekt
+  # ==========================================================
+
+  - right:
+      joints:
+        r_shoulder_pitch: -8
+        r_shoulder_roll: -2
+        r_arm_yaw: -17
+        r_elbow_pitch: -88
+        r_forearm_yaw: -91
+        r_wrist_pitch: 4
+        r_wrist_roll: 25
+        r_gripper: -25  # offen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  # ==========================================================
+  # 03 WARTEN AUF ENTER → dann Greifer schließen
+  # ==========================================================
+  - wait_enter: true
+    close_gripper_on_enter: true
+
+
+  # ==========================================================
+  # 04 Arm hebt Objekt an
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -8
+        r_shoulder_roll: -12
+        r_arm_yaw: -18
+        r_elbow_pitch: -90
+        r_forearm_yaw: 60
+        r_wrist_pitch: -5
+        r_wrist_roll: 40
+        r_gripper: 13 #Geschlossen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 05 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -7
+        r_shoulder_roll: 0
+        r_arm_yaw: 24
+        r_elbow_pitch: -60
+        r_forearm_yaw: 88
+        r_wrist_pitch: 3
+        r_wrist_roll: -34
+        r_gripper: 13 #Geschlossen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 06 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -11
+        r_shoulder_roll: 0
+        r_arm_yaw: 40
+        r_elbow_pitch: -120
+        r_forearm_yaw: 15
+        r_wrist_pitch: 0
+        r_wrist_roll: 9
+        r_gripper: 13 #Geschlossen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  # ==========================================================
+  # 07 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -7
+        r_shoulder_roll: -3
+        r_arm_yaw: -1
+        r_elbow_pitch: -63
+        r_forearm_yaw: 4
+        r_wrist_pitch: -44
+        r_wrist_roll: 7
+        r_gripper: 13 #Geschlossen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  # ==========================================================
+  # 08 
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -7
+        r_shoulder_roll: -5
+        r_arm_yaw: -60
+        r_elbow_pitch: -105
+        r_forearm_yaw: -29
+        r_wrist_pitch: -30
+        r_wrist_roll: -19
+        r_gripper: 13 #Geschlossen
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+  # ==========================================================
+  # 09 Weit nach rechts bewegen
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -10
+        r_shoulder_roll: -5
+        r_arm_yaw: -55
+        r_elbow_pitch: -80
+        r_forearm_yaw: 45
+        r_wrist_pitch: -10
+        r_wrist_roll: 30
+        r_gripper: 13
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 10 Arm hochhalten (über Ziel)
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -12
+        r_shoulder_roll: -8
+        r_arm_yaw: -65
+        r_elbow_pitch: -70
+        r_forearm_yaw: 30
+        r_wrist_pitch: -15
+        r_wrist_roll: 20
+        r_gripper: 13
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
+
+  # ==========================================================
+  # 11 Objekt fallen lassen (Gripper öffnen)
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -12
+        r_shoulder_roll: -8
+        r_arm_yaw: -65
+        r_elbow_pitch: -70
+        r_forearm_yaw: 30
+        r_wrist_pitch: -15
+        r_wrist_roll: 20
+        r_gripper: -25
+      use_degrees: true
+    steps: 40
+    delay: 0.02
+
+
+  # ==========================================================
+  # 12 ZURÜCK ZUR HOME POSE
+  # ==========================================================
+  - right:
+      joints:
+        r_shoulder_pitch: -7
+        r_shoulder_roll: -2
+        r_arm_yaw: -1
+        r_elbow_pitch: -60
+        r_forearm_yaw: -1
+        r_wrist_pitch: -21
+        r_wrist_roll: 13
+        r_gripper: -25
+      use_degrees: true
+    steps: 80
+    delay: 0.02
+
