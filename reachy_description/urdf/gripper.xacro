@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ========================= -->
+  <!-- Parameters -->
+  <!-- ========================= -->
+  <xacro:property name="finger_length" value="0.06"/>
+  <xacro:property name="finger_width"  value="0.01"/>
+  <xacro:property name="finger_height" value="0.02"/>
+
+  <!-- ========================= -->
+  <!-- Gripper Base Link -->
+  <!-- ========================= -->
+  <link name="gripper_base_link">
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.02"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.03 0.03 0.02"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="1e-4" iyy="1e-4" izz="1e-4"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <!-- ========================= -->
+  <!-- Left Finger -->
+  <!-- ========================= -->
+  <link name="left_finger_link">
+    <visual>
+      <geometry>
+        <box size="${finger_length} ${finger_width} ${finger_height}"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${finger_length} ${finger_width} ${finger_height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="1e-5" iyy="1e-5" izz="1e-5"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <!-- ========================= -->
+  <!-- Right Finger -->
+  <!-- ========================= -->
+  <link name="right_finger_link">
+    <visual>
+      <geometry>
+        <box size="${finger_length} ${finger_width} ${finger_height}"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${finger_length} ${finger_width} ${finger_height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="1e-5" iyy="1e-5" izz="1e-5"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <!-- ========================= -->
+  <!-- Active Joint (LEFT finger) -->
+  <!-- ========================= -->
+  <joint name="gripper_left_finger_joint" type="revolute">
+    <parent link="gripper_base_link"/>
+    <child  link="left_finger_link"/>
+    <origin xyz="0 0.02 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="0.0" upper="0.8" effort="5" velocity="2"/>
+  </joint>
+
+  <!-- ========================= -->
+  <!-- Mimic Joint (RIGHT finger) -->
+  <!-- ========================= -->
+  <joint name="gripper_right_finger_joint" type="revolute">
+    <parent link="gripper_base_link"/>
+    <child  link="right_finger_link"/>
+    <origin xyz="0 -0.02 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="0.0" upper="0.8" effort="5" velocity="2"/>
+    <mimic joint="gripper_left_finger_joint" multiplier="1.0"/>
+  </joint>
+
+</robot>
+

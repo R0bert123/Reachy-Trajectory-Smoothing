@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<robot name="right_arm">
+
+  <!-- ================= BASE ================= -->
+  <link name="base_link"/>
+
+  <joint name="base_to_r_shoulder" type="fixed">
+    <parent link="base_link"/>
+    <child link="r_shoulder"/>
+    <origin xyz="0.0 -0.19 0.0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ================= ARM ================= -->
+  <link name="r_shoulder"/>
+  <joint name="r_shoulder_pitch" type="revolute">
+    <parent link="r_shoulder"/>
+    <child link="r_shoulder_x"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.618" upper="1.57" effort="10" velocity="1.5"/>
+  </joint>
+
+  <link name="r_shoulder_x"/>
+  <joint name="r_shoulder_roll" type="revolute">
+    <parent link="r_shoulder_x"/>
+    <child link="r_upper_arm"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-3.14" upper="0.174" effort="10" velocity="1.5"/>
+  </joint>
+
+  <link name="r_upper_arm"/>
+  <joint name="r_arm_yaw" type="revolute">
+    <parent link="r_upper_arm"/>
+    <child link="r_forearm"/>
+    <origin xyz="0 0 -0.28"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="10" velocity="1.5"/>
+  </joint>
+
+  <link name="r_forearm"/>
+  <joint name="r_elbow_pitch" type="revolute">
+    <parent link="r_forearm"/>
+    <child link="r_wrist"/>
+    <origin xyz="0 0 -0.25"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.182" upper="0.0" effort="10" velocity="1.5"/>
+  </joint>
+
+  <link name="r_wrist"/>
+  <joint name="r_forearm_yaw" type="revolute">
+    <parent link="r_wrist"/>
+    <child link="r_wrist2hand"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.745" upper="1.745" effort="10" velocity="1.5"/>
+  </joint>
+
+  <link name="r_wrist2hand"/>
+  <joint name="r_wrist_pitch" type="revolute">
+    <parent link="r_wrist2hand"/>
+    <child link="r_gripper"/>
+    <origin xyz="0 0 -0.085"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.785" upper="0.785" effort="10" velocity="1.5"/>
+  </joint>
+
+  <link name="r_gripper"/>
+  <joint name="r_wrist_roll" type="revolute">
+    <parent link="r_gripper"/>
+    <child link="r_tool"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-0.95" upper="0.61" effort="10" velocity="1.5"/>
+  </joint>
+
+  <link name="r_tool"/>
+
+</robot>
+

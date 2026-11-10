@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="right_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Benötigte Argumente der Reachy-Xacro-Kette -->
+    <xacro:arg name="use_gazebo" default="false"/>
+    <xacro:arg name="use_fake_hardware" default="false"/>
+    <xacro:arg name="use_mock_hardware" default="false"/>
+    <xacro:arg name="use_real_hardware" default="true"/>
+
+    <!-- Arm-Definition einbinden -->
+    <xacro:include filename="arm.urdf.xacro"/>
+
+    <!-- Macro-Aufruf für rechten Arm -->
+    <xacro:arm
+        prefix="r"
+        parent="torso"
+        side="right"
+        damping="0.0"
+        friction="0.0"
+        serial_port="/dev/null"
+        mx_ids=""
+        offsets=""
+        is_direct="true"
+        reductions=""
+        force_sensor_id="0"
+        fan_id="0"
+    />
+
+</robot>
+
